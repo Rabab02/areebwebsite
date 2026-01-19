@@ -8,6 +8,17 @@ interface SEOProps {
   language?: 'en' | 'ar';
 }
 
+/**
+ * SEO Component - Client-side meta tag updater
+ * 
+ * NOTE: Meta tags are now injected server-side (see server/seo-injector.ts)
+ * This component serves as a hydration updater for:
+ * - Dynamic language changes
+ * - Client-side route changes
+ * - Runtime SEO updates
+ * 
+ * It safely updates existing tags (from server) or creates them if missing.
+ */
 export function SEO({ title, description, keywords, canonicalUrl, language = 'ar' }: SEOProps) {
   useEffect(() => {
     // Update HTML lang and dir attributes for SEO and accessibility
@@ -29,15 +40,15 @@ export function SEO({ title, description, keywords, canonicalUrl, language = 'ar
       }
       
       // Update Twitter title
-      const twitterTitle = document.querySelector('meta[name="twitter:title"]') as HTMLMetaElement;
-      if (twitterTitle) {
-        twitterTitle.content = title;
-      } else {
-        const meta = document.createElement('meta');
-        meta.name = 'twitter:title';
-        meta.content = title;
-        document.head.appendChild(meta);
-      }
+      // const twitterTitle = document.querySelector('meta[name="twitter:title"]') as HTMLMetaElement;
+      // if (twitterTitle) {
+      //   twitterTitle.content = title;
+      // } else {
+      //   const meta = document.createElement('meta');
+      //   meta.name = 'twitter:title';
+      //   meta.content = title;
+      //   document.head.appendChild(meta);
+      // }
     }
     
     if (description) {
@@ -63,15 +74,15 @@ export function SEO({ title, description, keywords, canonicalUrl, language = 'ar
       }
 
       // Update Twitter description
-      const twitterDesc = document.querySelector('meta[name="twitter:description"]') as HTMLMetaElement;
-      if (twitterDesc) {
-        twitterDesc.content = description;
-      } else {
-        const meta = document.createElement('meta');
-        meta.name = 'twitter:description';
-        meta.content = description;
-        document.head.appendChild(meta);
-      }
+      // const twitterDesc = document.querySelector('meta[name="twitter:description"]') as HTMLMetaElement;
+      // if (twitterDesc) {
+      //   twitterDesc.content = description;
+      // } else {
+      //   const meta = document.createElement('meta');
+      //   meta.name = 'twitter:description';
+      //   meta.content = description;
+      //   document.head.appendChild(meta);
+      // }
     }
 
     if (keywords) {
@@ -140,7 +151,7 @@ export function SEO({ title, description, keywords, canonicalUrl, language = 'ar
         "@context": "https://schema.org",
         "@type": "Organization",
         "name": "Areeb Tech",
-        "alternateName": "Areeb Technology",
+        "alternateName": "Areebb Technology",
         "url": "https://www.areebb.com",
         "logo": {
           "@type": "ImageObject",

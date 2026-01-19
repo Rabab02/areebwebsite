@@ -6,7 +6,7 @@
   <!-- Homepage - Arabic (Default) -->
   <url>
     <loc>https://www.areebb.com/</loc>
-    <lastmod>2025-01-15</lastmod>
+    <lastmod>2025-01-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="ar" href="https://www.areebb.com/?lang=ar" />
@@ -22,7 +22,7 @@
   <!-- Homepage - English -->
   <url>
     <loc>https://www.areebb.com/?lang=en</loc>
-    <lastmod>2025-01-15</lastmod>
+    <lastmod>2025-01-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="ar" href="https://www.areebb.com/?lang=ar" />
@@ -33,7 +33,7 @@
   <!-- Services Page -->
   <url>
     <loc>https://www.areebb.com/services</loc>
-    <lastmod>2025-01-15</lastmod>
+    <lastmod>2025-01-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

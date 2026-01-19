@@ -28,7 +28,7 @@ export const socialMediaLinks: SocialMediaLink[] = [
   {
     name: "LinkedIn",
     icon: Linkedin,
-    url: "#", // Replace with your LinkedIn company/profile URL
+    url: "https://www.linkedin.com/company/areebtech/", // Replace with your LinkedIn company/profile URL
   },
 //   {
 //     name: "Twitter",
