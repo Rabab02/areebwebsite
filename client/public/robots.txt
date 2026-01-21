@@ -1,0 +1,21 @@
+# robots.txt for Areeb
+# https://www.areebb.com/robots.txt
+
+User-agent: *
+Allow: /
+
+# Disallow admin and API routes
+Disallow: /api/
+Disallow: /admin/
+
+# Allow all important pages
+Allow: /
+Allow: /services
+Allow: /?lang=en
+Allow: /?lang=ar
+
+# Sitemap location
+Sitemap: https://www.areebb.com/sitemap.xml
+
+# Crawl-delay (optional, helps prevent server overload)
+Crawl-delay: 1
