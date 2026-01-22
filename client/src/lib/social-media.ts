@@ -23,7 +23,7 @@ export const socialMediaLinks: SocialMediaLink[] = [
   {
     name: "Instagram",
     icon: Instagram,
-    url: "https://www.instagram.com/areebai5/", // Replace with your Instagram profile URL
+    url: "https://www.instagram.com/areeb.technology/", // Replace with your Instagram profile URL
   },
   {
     name: "LinkedIn",

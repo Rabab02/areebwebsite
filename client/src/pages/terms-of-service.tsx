@@ -6,9 +6,14 @@ import { useI18n } from "@/lib/i18n";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
 import { Link } from "wouter";
+import { useEffect } from "react";
 
 export default function TermsOfServicePage() {
   const { t, language } = useI18n();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div className="min-h-screen bg-background font-sans relative">

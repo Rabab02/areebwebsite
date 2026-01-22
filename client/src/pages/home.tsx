@@ -219,6 +219,9 @@ export default function Home() {
   const { language, t } = useI18n();
 
   useEffect(() => {
+    // Scroll to top on page load
+    window.scrollTo(0, 0);
+    
     // Handle hash navigation when coming from other pages
     const hash = window.location.hash;
     if (hash) {

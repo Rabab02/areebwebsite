@@ -50,6 +50,18 @@ export function Navbar() {
     }
   };
 
+  const handleHomeClick = () => {
+    if (location === '/') {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  };
+
+  const handleServicesClick = () => {
+    if (location === '/services') {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  };
+
   const toggleLanguage = () => {
     setLanguage(language === 'en' ? 'ar' : 'en');
   };
@@ -70,8 +82,8 @@ export function Navbar() {
 
           {/* Desktop Nav */}
           <div className="hidden md:flex items-center space-x-6 lg:space-x-8">
-            <Link href="/" className="text-xs lg:text-sm font-bold text-gray-700 hover:text-primary transition-colors uppercase tracking-wide">{t('nav.home')}</Link>
-            <Link href="/services" className="text-xs lg:text-sm font-bold text-gray-700 hover:text-primary transition-colors uppercase tracking-wide">{t('nav.services')}</Link>
+            <Link href="/" onClick={handleHomeClick} className="text-xs lg:text-sm font-bold text-gray-700 hover:text-primary transition-colors uppercase tracking-wide">{t('nav.home')}</Link>
+            <Link href="/services" onClick={handleServicesClick} className="text-xs lg:text-sm font-bold text-gray-700 hover:text-primary transition-colors uppercase tracking-wide">{t('nav.services')}</Link>
             <a onClick={() => scrollToSection('about')} className="text-xs lg:text-sm font-bold text-gray-700 hover:text-primary transition-colors uppercase tracking-wide cursor-pointer">{t('nav.about')}</a>
             <a onClick={() => scrollToSection('contact')} className="text-xs lg:text-sm font-bold text-gray-700 hover:text-primary transition-colors uppercase tracking-wide cursor-pointer">{t('nav.contact')}</a>
             
@@ -119,8 +131,8 @@ export function Navbar() {
       {isOpen && (
         <div className="md:hidden bg-white border-b border-gray-200 absolute w-full top-full left-0 shadow-lg max-h-[calc(100vh-80px)] overflow-y-auto">
           <div className="px-4 py-4 sm:py-6 space-y-3 sm:space-y-4">
-            <Link href="/" onClick={() => setIsOpen(false)} className="block text-base sm:text-lg font-bold text-gray-700 hover:text-primary py-2">{t('nav.home')}</Link>
-            <Link href="/services" onClick={() => setIsOpen(false)} className="block text-base sm:text-lg font-bold text-gray-700 hover:text-primary py-2">{t('nav.services')}</Link>
+            <Link href="/" onClick={() => { setIsOpen(false); handleHomeClick(); }} className="block text-base sm:text-lg font-bold text-gray-700 hover:text-primary py-2">{t('nav.home')}</Link>
+            <Link href="/services" onClick={() => { setIsOpen(false); handleServicesClick(); }} className="block text-base sm:text-lg font-bold text-gray-700 hover:text-primary py-2">{t('nav.services')}</Link>
             <a onClick={() => { scrollToSection('about'); setIsOpen(false); }} className="block text-base sm:text-lg font-bold text-gray-700 hover:text-primary py-2 cursor-pointer">{t('nav.about')}</a>
             <a onClick={() => { scrollToSection('contact'); setIsOpen(false); }} className="block text-base sm:text-lg font-bold text-gray-700 hover:text-primary py-2 cursor-pointer">{t('nav.contact')}</a>
             <Button onClick={() => { scrollToContact(); setIsOpen(false); }} className="w-full rounded-full font-bold text-sm sm:text-base py-6">{t('nav.getStarted')}</Button>

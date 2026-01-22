@@ -12,6 +12,9 @@ export default function ServicesPage() {
   const [location] = useLocation();
 
   useEffect(() => {
+    // Scroll to top on page load
+    window.scrollTo(0, 0);
+    
     // Handle hash navigation when coming from other pages or direct link
     const hash = window.location.hash;
     if (hash) {

@@ -156,17 +156,17 @@ export function ServicesDetailed() {
             </p>
           </motion.div>
 
-          <div className="grid lg:grid-cols-2 gap-8 sm:gap-10 lg:gap-12">
+          <div className="grid lg:grid-cols-2 gap-2 sm:gap-3 lg:gap-4">
             {featuredServices.map((service, index) => (
               <motion.div
                 key={index}
                 id={service.id}
                 className="scroll-mt-24"
-                initial={{ opacity: 0, scale: 0.95 }}
-                animate={{ opacity: 1, scale: 1 }}
+                initial={{ opacity: 0, scale: 0.75 }}
+                animate={{ opacity: 1, scale: 0.8 }}
                 transition={{ duration: 0.6, delay: 0.7 + index * 0.2 }}
               >
-                <Card className={`relative overflow-hidden border-2 border-white/20 bg-gradient-to-br ${service.gradient} backdrop-blur-md group cursor-pointer h-full hover:scale-[1.02] hover:border-primary/50 transition-all duration-300 hover:shadow-2xl hover:shadow-primary/20`}>
+                <Card className={`relative overflow-hidden border-2 border-white/20 bg-gradient-to-br ${service.gradient} backdrop-blur-md group cursor-pointer h-full hover:scale-[0.92] hover:border-primary/50 transition-all duration-300 hover:shadow-2xl hover:shadow-primary/20`}>
                   {/* Background glow effect */}
                   <div className={`absolute inset-0 bg-gradient-to-br ${service.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-300`} />
                   
